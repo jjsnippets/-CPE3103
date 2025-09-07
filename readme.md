@@ -1,5 +1,5 @@
 # CPE 3103 (FUNDAMENTALS OF MIXED SIGNALS AND SENSORS)
-> Check branches for codes of current activities.
+> Check branches for codes of current activities. <br>
 > For best compatilbility, use **MATLAB R2025a**
 <br>
 
