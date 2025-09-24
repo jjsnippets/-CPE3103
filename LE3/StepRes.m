@@ -5,11 +5,9 @@
 
 % Output response q(t) for input V_in(t) = unit step
 function st = StepRes(t)
-    
-    if (t >= 0)
-        st = (1/20) * (1 - exp(-t/2) * ...
-             (cos(sqrt(199) * t / 2) + (1/sqrt(199) * sin(sqrt(199) * t / 2))));
-    else
-        st = 0;
-    end
+    st = zeros(size(t));    % vector the same size as t
+    idx = (t >= 0);         % logical indexing for t values; implements u(t)
+                            % formula from 2B
+    st(idx) = (1/20) * (1 - exp(-t(idx)/2) .* ...
+              (cos(sqrt(199)*t(idx)/2) + (1/sqrt(199)) * sin(sqrt(199)*t(idx)/2)));
 end
